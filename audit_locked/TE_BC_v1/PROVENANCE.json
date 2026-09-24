@@ -1,0 +1,89 @@
+{
+  "artifact": "GABPO_TE_BC_v1",
+  "status": "LOCKED_REPRODUCED",
+  "date_export_utc": "2026-09-24T10:18:28.561256Z",
+  "experimental_design": {
+    "n_te_baselines": 3,
+    "n_scenarios": 5,
+    "n_seeds": 10,
+    "total_te_observations": 150,
+    "te_bc_comparisons": 15,
+    "N_a": 50,
+    "N_p": 12,
+    "T_ep": 288,
+    "environment_seed_rule": "seed + 900"
+  },
+  "statistics": {
+    "paired_test": "Wilcoxon signed-rank",
+    "multiple_testing": "Holm-Bonferroni",
+    "alpha": 0.05,
+    "number_of_comparisons": 15
+  },
+  "baselines": [
+    "TE1_OSPF",
+    "TE2_MATE",
+    "TE3_TeXCP"
+  ],
+  "scenarios": [
+    "S1_Nominal",
+    "S2_FlashCrowd",
+    "S3_PoP_Failure",
+    "S4_BGP_Anomaly",
+    "S5_WACREN_OOD"
+  ],
+  "checkpoint": {
+    "file": "bc_phase_D.pt",
+    "sha256": "faabe390e43c604dad68d8f44bf5c67fc5630a43ba1d9d34b45fa3281ae038c9"
+  },
+  "target_comparisons": {
+    "TE1_OSPF_S2": {
+      "raw_p": 0.232422,
+      "holm_p": 0.464844,
+      "gain_pct": 0.664818
+    },
+    "TE2_MATE_S3": {
+      "raw_p": 0.105469,
+      "holm_p": 0.316406,
+      "gain_pct": 0.476946
+    },
+    "TE3_TeXCP_S3": {
+      "raw_p": 0.769531,
+      "holm_p": 0.769531,
+      "gain_pct": -0.009084
+    }
+  },
+  "files": {
+    "GABPO_TE_all_results_LOCKED.csv": {
+      "size_bytes": 12018,
+      "sha256": "55466a815964b75f715f9f70b91c807d11fa01b68ff8dddddcdba3030d0b054a"
+    },
+    "TE1_OSPF_results.csv": {
+      "size_bytes": 4018,
+      "sha256": "6aa154e8bd19cf9eeff1f2875fdef771254f157ede6b8bc108404d5dc0fdf824"
+    },
+    "TE2_MATE_results.csv": {
+      "size_bytes": 4039,
+      "sha256": "2868016079751e36a6239b7b67781a515efefaeb041a36ef8b99772b09ade1d2"
+    },
+    "TE3_TeXCP_results.csv": {
+      "size_bytes": 4146,
+      "sha256": "7e898c7dbf993bb9c3268f024a459f26e8d7d7f116aff54a892f6abd966d7fe8"
+    },
+    "TE_BC_three_target_comparisons_LOCKED.csv": {
+      "size_bytes": 370,
+      "sha256": "cdec50ae89b7cd750368298fba9c7f98f7b6a7857d5b2a775cf5f996467bd4c7"
+    },
+    "TE_vs_BC_HolmBonferroni_LOCKED.csv": {
+      "size_bytes": 1480,
+      "sha256": "401ad032cfa531b32ed53c0bffc7efc0ffc584691d33cd35c650cdd25b21020e"
+    },
+    "TE_vs_BC_Wilcoxon_raw_LOCKED.csv": {
+      "size_bytes": 1479,
+      "sha256": "dcaae79eac9f1aefd5263002cc7729465bc5c32c29c964f681f18e82ed516c2d"
+    },
+    "bc_phase_D.pt": {
+      "size_bytes": 92853,
+      "sha256": "faabe390e43c604dad68d8f44bf5c67fc5630a43ba1d9d34b45fa3281ae038c9"
+    }
+  }
+}
